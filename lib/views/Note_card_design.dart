@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-import 'package:google_fonts/google_fonts.dart';
-
 class NoteCardDesign extends StatelessWidget {
   const NoteCardDesign({super.key});
   Color getRandomColor() {
@@ -18,7 +16,7 @@ class NoteCardDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 0, bottom: 24),
+      padding: EdgeInsets.only(top: 20, bottom: 24),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10)),
       child: Column(
