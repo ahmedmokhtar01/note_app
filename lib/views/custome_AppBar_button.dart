@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomeAppBarButton extends StatelessWidget {
-  const CustomeAppBarButton({super.key});
-
+  const CustomeAppBarButton({super.key, required this.iconButton});
+  final IconData iconButton;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +15,7 @@ class CustomeAppBarButton extends StatelessWidget {
       child: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.search,
+            iconButton,
             color: Colors.white,
           )),
     );

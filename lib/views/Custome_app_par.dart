@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:note_app/views/custome_AppBar_button.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  const CustomAppBar(
+      {super.key, required this.appParTitle, required this.iconData});
+  final String appParTitle;
+  final IconData iconData;
 
   @override
   Widget build(BuildContext context) {
@@ -10,10 +13,12 @@ class CustomAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Notes",
+          appParTitle,
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
-        CustomeAppBarButton()
+        CustomeAppBarButton(
+          iconButton: iconData,
+        )
       ],
     );
   }
